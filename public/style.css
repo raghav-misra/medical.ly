@@ -1,0 +1,8 @@
+.radio-set{
+    text-align: left;
+    width: 80px;
+    display: inline-block;
+}
+.hide{
+    display: none;
+}

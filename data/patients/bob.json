@@ -1,0 +1,43 @@
+var bobData = [
+    {
+      "metadata": {
+        "appointments":[
+          {
+            "date": "4/20/1969",
+            "name": "Bl00d Test",
+            "notes": "ha u gonna lose blood and die"
+          }
+        ],
+        "email": "esmeralda_lak@yahoo.com",
+        "id": "dZsJOGMyxy",
+        "firstName": "Bob",
+        "lastName": "Bobberson",
+        "phone": [
+          "713-838-1949",
+          "281-682-1215"
+        ],
+        "doctor": "OZLJMMiQyP",
+        "address": "Houston, Texas(TX), 77025,1005 Michael Street",
+        "healthProfile": {
+          "age": 666,
+          "bloodtype": "O+",
+          "dob": "10/15/1969",
+          "height": 69,
+          "medication": [
+            {
+              "dosage": [
+                1,
+                0,
+                1
+              ],
+              "name": "Albuterol",
+              "notes": "dont get high"
+            }
+          ],
+          "weight": 6078
+        }
+      },
+      "password": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb",
+      "username": "cd9fb1e148ccd8442e5aa74904cc73bf6fb54d1d54d333bd596aa9bb4bb4e961"
+    }
+  ]

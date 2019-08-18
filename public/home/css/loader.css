@@ -1,0 +1,16 @@
+.loaderDiv{
+    position:absolute;
+    padding: 100%;
+    overflow: hidden;
+    z-index: 98;
+    background-color:white;
+  
+}
+.loaderDiv div{
+    position:fixed;
+    overflow: hidden;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+ 
+}

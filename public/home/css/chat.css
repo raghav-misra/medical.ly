@@ -1,0 +1,112 @@
+
+
+/* Style overrides + Color Vars */
+:root{
+    --blue-grey: #263238;
+    --light-blue-grey: #4f5b62;
+}
+
+
+
+hr.black{
+    height: 0;
+    border-bottom: 2px white solid;
+}
+
+/* Chat messages */
+.message{
+    width: 100%;
+    padding: 20px;
+   
+}
+
+.messages{
+    padding-bottom: 300px;
+    background-color: #263238;
+    height: 50vh;
+ 
+}
+
+#messagebox{
+    overflow-y: scroll;
+    height: 50vh;
+}
+
+.message:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.message.bot .contain{
+    float: left;
+    text-align: left;
+    background: cornflowerblue;
+}
+.message.user .contain{
+    float: right;
+    text-align: right;
+    background: rgb(7, 136, 7);
+}
+
+.message .contain{
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 70px;
+    max-width: 250px;
+    font-weight: 300;
+    font-size: 25px;
+    position: relative;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+.message .contain::after{
+    content: attr(data-time);
+    position: absolute;
+    font-size: 15px;
+    color: grey;
+    bottom: -30px;
+}
+
+.message.bot .contain::after{
+    left: 5px;
+}
+
+.message.user .contain::after{
+    right: 5px;
+}
+
+/* Send a message box */
+.send-box{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background: var(--light-blue-grey);
+}
+
+.send-box input{
+    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    border: var(--blue-grey) 2px solid;
+    padding: 10px;
+    background: var(--blue-grey);
+    font-weight: 600;
+    color: white;
+}
+
+.send-box #send{
+    position: fixed;
+    right: 30px;
+    bottom: 45px;
+}
+
+@keyframes fade-in{
+    from { opacity: 0; }
+    to {opacity: 1}
+}

@@ -1,0 +1,118 @@
+@import url('https://use.fontawesome.com/releases/v5.8.2/css/all.css');
+
+header{
+    background: #002f61;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+header.subheader{
+    background: #003a79;
+}
+
+.hide{
+    display: none;
+}
+.tab{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    height: 50px;
+    outline: none !important;
+    transition: transform 0.5s ease;
+}
+
+.tab:hover{
+    outline: none !important;
+    color: white;
+    transform: scale(1.1);
+}
+
+.tab::after{
+    display: none;
+    position: absolute;
+    left: 65px;
+    border-radius: 10px;
+    border: 1px white solid;
+    background: #003b79;
+    bottom: 5px;
+    padding: 5px;
+    transform: scale(0.95);
+    width: 160px;
+    transition: 0.25s opacity ease;
+    content: attr(data-tool);
+}
+
+.tab:hover::after{
+    display: inline-block;
+    opacity: 1;
+}
+
+.tab i{
+    font-size: 30px;
+}
+
+header h3{
+    font-size: 30px;
+}
+
+.content{
+    position: fixed;
+    bottom: 0;
+    overflow: auto;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100vh;
+    z-index: 1;
+}
+
+.card{
+    text-align: left;
+    background: rgb(235, 235, 255);
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.233);
+    margin: 10px;
+}
+
+.card.card-inline .card-text{
+    max-width: 300px;
+}
+
+.card.card-inline{
+    border: 1px rgb(207, 207, 255) solid;
+    display: inline-block;
+}
+
+.card.card-metro *{
+    border-color: white;
+}
+
+.card.card-metro{
+    border: none;
+    color: white;
+    background: #003b79;
+    border-radius: none;
+
+}
+
+.nav{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    position: fixed;
+    width: 75px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #003a79;
+}
+
+.screen{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}

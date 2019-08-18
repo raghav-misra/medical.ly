@@ -1,0 +1,23 @@
+{
+  "name": "expo-hacks-ehr",
+  "version": "1.0.0",
+  "description": "An EHR that focuses on people, not information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "author": "raghavm, LehuyH",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.17.1",
+    "jsonstore.io": "^0.1.0",
+    "nodemon": "^1.19.1",
+    "socket.io": "^2.2.0"
+  }
+}

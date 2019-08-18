@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Doctor Dashboard</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js">
+    </script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/loader.css" rel="stylesheet">
+    <link href="shared.css" rel="stylesheet">
+    <link href="css/chat.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id='spinner' class="loaderDiv">
+        <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <div class="nav">
+        <button onclick="change('home')" class="btn tab" data-tool="Homepage">
+            <i style="position: relative; right: 2px;" class="fas fa-home">
+            </i>
+        </button>
+        <button  onclick="change('appointments')" class="btn tab" data-tool="View Appointments">
+            <i style='position: relative; right: 1px;' class="fas fa-calendar-alt">
+            </i>
+        </button>
+        <button onclick="change('chat')" class="btn tab" data-tool="View Chat Conversations">
+            <i class="fas fa-comment-medical"></i>
+        </button>
+        <button onclick="change('patientManager')" class="btn tab" data-tool="Patient Manager">
+            <i class="fas fa-user"></i>
+        </button>
+        <button onclick="logout()"class="btn tab" data-tool="Log Out & Go Back" style="position: absolute; bottom: 0; left: 10px;">
+            <i class="fas fa-sign-out-alt"></i>
+        </button>
+    </div>
+    <div class="content">
+        <header>
+            <h3 id='titleDash' class="font-weight-light">
+                Null Dashboard
+                </h1>
+        </header>
+        <div id='home' style="text-align: center;">
+            <header class="subheader">
+                <h5 class="font-weight-light">General Information</h5>
+            </header>
+            <div class="card card-metro card-inline">
+                <div style="text-align: center;" class="card-header">
+                    Appointments
+                </div>
+                <div style="text-align: center;" class="card-body">
+                    <h4>You have 2<br>Appointment(s)<h4>
+                </div>
+            </div>
+            <div class="card card-metro card-inline">
+                    <div style="text-align: center;" class="card-header">
+                        Patients Chat
+                    </div>
+                    <div style="text-align: center;" class="card-body">
+                        <h4>You have <span id="chatreqnum">0</span><br>Chat Request(s)<h4>
+                    </div>
+                </div>
+        </div>
+        <div id='appointments' class="hide">
+                <header class="subheader">
+                    <h5 class="font-weight-light">Appointments</h5>
+                </header>
+
+        </div>
+        <div id='chat' class="hide">
+            <header class="subheader">
+                <h5 class="font-weight-light">Chat</h5>
+            </header>
+            <br>
+
+            <div class="card card-inline" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 id=''class="card-title">Chat Requests Will Show Here</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Your patients can request to chat with you any time</h6>
+                  
+                </div>
+
+              </div>
+              <div id='requests'>
+              </div>
+            
+              <div class="hide" id='chats'>
+                  
+                    <div class="messages">
+                     
+                            <div id="messagebox">
+                                
+                            </div>
+                        </div>
+                        <div class="send-box">
+                            <input placeholder="Type in your message here..." id="message" type="text">
+                            <img src="img/send.svg" id="send">
+                        </div>
+                    
+            </div>
+        </div>
+        <div id='patientManager' class="hide">
+                <header class="subheader">
+                        <h5 class="font-weight-light">Patients</h5>
+                    </header>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+
+    <script src="/socket.io/socket.io.js">
+    </script>
+    <script src="js/loader.js"></script>
+    <script src="js/doctor.js"></script>
+    <script src="js/chatDoc.js"></script>
+    
+
+</body>
+
+</html>

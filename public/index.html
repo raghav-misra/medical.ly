@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<title>Medical.ly</title>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js">
+	</script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="jumbotron jumbotron-fluid" style="text-align: center;">
+		<div class="container container-fluid" style="padding-top: 0;">
+            <img src="https://i.vgy.me/ShhuR7.png" style="width: 200px;"> 
+            <h1 class="display-4">medical.ly</h1>
+            <p class="lead">bridging the gap from patient to doctor<p>
+                    <div id='spinner'class="spinner-border hide" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+        </div>
+		
+	
+    </div>
+    <div class="alert alert-danger hide" id='errorAlert' role="alert">
+            <strong>Login Failed</strong> Your Username/Password is incorrect   
+    </div>
+	<div class="login container container-fluid" id="login">
+        <h1>Login:</h1>
+        <hr>
+        <div class="form-group">
+            <label for="username">First Name:</label> 
+            <input id="username" class="form-control" id="username" placeholder="Enter the display name you signed up with..." type="text">
+        </div>
+        <div class="form-group">
+            <label for="username">Password:</label> 
+            <input id="password" class="form-control" id="username" placeholder="Enter your secret password..." type="password">
+        </div>
+        <div class="radio-group">
+            <div class="radio-set">
+                <input checked name="user" type="radio" value="patient"> <label>Patient</label>
+            </div>
+            <div class="radio-set">
+                <input name="user" type="radio" value="doctor"> <label>Doctor</label>
+            </div>
+        </div>
+        <button class="btn btn-primary" onclick="login();">Login</button>
+        <hr>
+    </div>
+    <div class="login container container-fluid" id="login">
+        <h1>Patient Signup:</h1>
+        <hr>
+        <div class="form-group">
+            <label for="usernameSign">First Name:</label> 
+            <input id="usernameSign" class="form-control" id="username" placeholder="Enter your first name..." type="text">
+        </div>
+        <div class="form-group">
+            <label for="lastNameSign">Last Name:</label> 
+            <input id="lastNameSign" class="form-control" id="username" placeholder="Enter your last name..." type="text">
+        </div>
+        <div class="form-group">
+                <label for="emailSign">Email</label> 
+                <input id="emailSign" class="form-control" id="username" placeholder="Enter your email..." type="text">
+            </div>
+        <div class="form-group">
+            <label for="passwordSign">Password:</label> 
+            <input id="passwordSign" class="form-control" id="username" placeholder="Enter your secret password..." type="password">
+        </div>
+        <div class="form-group">
+            <label for="phoneSign">Phone Number:</label> 
+            <input id="phoneSign" class="form-control" id="username" placeholder="Enter your phone #..." type="text">
+        </div>
+        <div class="form-group">
+            <label for="ageSign">Age:</label> 
+            <input id="ageSign" class="form-control" id="username" placeholder="Enter your approximate age in years..." type="number" min="30">
+        </div>
+        <div class="form-group">
+            <label for="dobSign">Date Of Birth:</label> 
+            <input id="dobSign" class="form-control" id="username" placeholder="mm/dd/yy" type="text">
+        </div>
+        <div class="form-group">
+            <label for="addressSign">Address:</label> 
+            <input id="addressSign" class="form-control" id="username" placeholder="Enter your street address..." type="text">
+        </div>
+        <div class="form-group">
+            <label for="doctorSign">Doctor Name:</label> 
+            <input id="doctorSign" class="form-control" id="username" placeholder="Enter your doctor's name..." type="text">
+        </div>
+        <div class="form-group">
+            <label for="weightSign">Weight:</label> 
+            <input id="weightSign" class="form-control" id="username" placeholder="Enter your weight in pounds..." type="number" min="30">
+        </div>
+        <div class="form-group">
+            <label for="heightSign">Height:</label> 
+            <input id="heightSign" class="form-control" id="username" placeholder="Enter your height in feet..." type="number" min="30">
+        </div>
+        <div class="form-group">
+            <label for="bloodSign">Blood Type:</label> 
+            <input id="bloodSign" class="form-control" id="username" placeholder="Enter your blood type..." type="text" min="30">
+        </div>
+        <button class="btn btn-success" onclick="signup();">Signup</button>
+        <hr>
+    </div>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8">
+	</script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	</script> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	</script> 
+	<script src="/socket.io/socket.io.js">
+	</script> 
+	<script src="main.js">
+	</script>
+</body>
+</html>
